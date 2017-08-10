@@ -1,5 +1,5 @@
 @charset "gb2312";
-/* Ö¯ÃÎ58£¨dede58.com£©×ö×îºÃµÄÖ¯ÃÎÕûÕ¾Ä£°åÏÂÔØÍøÕ¾ */
+/* Ö¯ï¿½ï¿½58ï¿½ï¿½dede58.comï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½Ö¯ï¿½ï¿½ï¿½ï¿½Õ¾Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¾ */
 .dede_pages {
 	text-align: center;
 	display: block;
@@ -57,7 +57,7 @@
 }
 
 
-/*-¹ØÓÚÎÒÃÇ-*/
+/*-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-*/
 .main_about {
     width: 100%;
     overflow: hidden;
@@ -138,7 +138,7 @@
 .project_con dl {
     width: 373px;
     float: left;
-    font-size: 14px;
+    /*font-size: 15px;*/
     margin: 15px;
     overflow: hidden;
     color: #333;
@@ -282,7 +282,7 @@
     text-align: left;
     margin-left: 15px;
 }
-/*-ÈË²ÅÕÐÆ¸-*/
+/*-ï¿½Ë²ï¿½ï¿½ï¿½Æ¸-*/
 .week_job {
     width: 1140px;
     margin: 0 auto;
@@ -377,7 +377,7 @@
     display: inline-block;
     margin: 0 10px;
 }
-/*-ÁªÏµÎÒÃÇ-*/
+/*-ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½-*/
 .week_container {
     margin: 0 auto;
     padding: 0 12px;
@@ -532,7 +532,7 @@
     font-size: 16px;
     line-height: 32px;
 }
-/*-·¢Õ¹Àú³Ì-*/
+/*-ï¿½ï¿½Õ¹ï¿½ï¿½ï¿½-*/
 .wk_about_hty-box {
     position: relative;
     margin-top: 20px;
