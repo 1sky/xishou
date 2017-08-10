@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>联系我们</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="css/style_2_common.css">
+		<link rel="stylesheet" type="text/css" href="css/style_2_portal_list.css">
+		<script src="js/common.js" type="text/javascript"></script>
+		<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
+		<script src="js/pace.js" type="text/javascript"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<style>
+		/*.BMap_mask {
+			background: transparent url(about:blank);
+		}
+		
+		.BMap_noscreen {
+			display: none;
+		}
+		
+		.BMap_button {
+			cursor: pointer;
+		}
+		
+		.BMap_zoomer {
+			background-image: url(http://api.map.baidu.com/images/mapctrls1d3.gif);
+			background-repeat: no-repeat;
+			overflow: hidden;
+			font-size: 1px;
+			position: absolute;
+			width: 7px;
+			height: 7px;
+		}
+		
+		.BMap_stdMpCtrl div {
+			position: absolute;
+		}
+		
+		.BMap_stdMpPan {
+			width: 44px;
+			height: 44px;
+			overflow: hidden;
+			background: url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat;
+		}
+		
+		.BMap_ie6 .BMap_stdMpPan {
+			background: none;
+		}
+		
+		.BMap_ie6 .BMap_smcbg {
+			left: 0;
+			width: 44px;
+			height: 464px;
+			filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://api.map.baidu.com/images/mapctrls2d0.png');
+		}
+		
+		.BMap_ie6 .BMap_stdMpPanBg {
+			z-index: -1;
+		}
+		
+		.BMap_stdMpPan .BMap_button {
+			height: 15px;
+			width: 15px;
+		}
+		
+		.BMap_panN,
+		.BMap_panW,
+		.BMap_panE,
+		.BMap_panS {
+			overflow: hidden;
+		}
+		
+		.BMap_panN {
+			left: 14px;
+			top: 0;
+		}
+		
+		.BMap_panW {
+			left: 1px;
+			top: 12px;
+		}
+		
+		.BMap_panE {
+			left: 27px;
+			top: 12px;
+		}
+		
+		.BMap_panS {
+			left: 14px;
+			top: 25px;
+		}
+		
+		.BMap_stdMpZoom {
+			top: 45px;
+			overflow: hidden;
+		}
+		
+		.BMap_stdMpZoom .BMap_button {
+			width: 22px;
+			height: 21px;
+			left: 12px;
+			overflow: hidden;
+			background-image: url(http://api.map.baidu.com/images/mapctrls2d0.png);
+			background-repeat: no-repeat;
+			z-index: 10;
+		}
+		
+		.BMap_ie6 .BMap_stdMpZoom .BMap_button {
+			background: none;
+		}
+		
+		.BMap_stdMpZoomIn {
+			background-position: 0 -221px;
+		}
+		
+		.BMap_stdMpZoomOut {
+			background-position: 0 -265px;
+		}
+		
+		.BMap_ie6 .BMap_stdMpZoomIn div {
+			left: 0;
+			top: -221px;
+		}
+		
+		.BMap_ie6 .BMap_stdMpZoomOut div {
+			left: 0;
+			top: -265px;
+		}
+		
+		.BMap_stdMpType4 .BMap_stdMpZoom .BMap_button {
+			left: 0;
+			overflow: hidden;
+			background: -webkit-gradient(linear, 50% 0, 50% 100%, from(rgba(255, 255, 255, 0.85)), to(rgba(217, 217, 217, 0.85)));
+			z-index: 10;
+			-webkit-border-radius: 22px;
+			width: 34px;
+			height: 34px;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			-webkit-box-shadow: 0 2px 3.6px #CCC;
+			display: -webkit-box;
+			-webkit-box-align: center;
+			-webkit-box-pack: center;
+			-webkit-box-sizing: border-box;
+		}
+		
+		.BMap_stdMpType4 .BMap_smcbg {
+			position: static;
+			background: url(http://api.map.baidu.com/images/mapctrls2d0_mb.png) 0 0 no-repeat;
+			-webkit-background-size: 24px 32px;
+		}
+		
+		.BMap_stdMpType4 .BMap_stdMpZoomIn {
+			background-position: 0 0;
+		}
+		
+		.BMap_stdMpType4 .BMap_stdMpZoomIn .BMap_smcbg {
+			width: 24px;
+			height: 24px;
+			background-position: 0 0;
+		}
+		
+		.BMap_stdMpType4 .BMap_stdMpZoomOut {
+			background-position: 0 0;
+		}
+		
+		.BMap_stdMpType4 .BMap_stdMpZoomOut .BMap_smcbg {
+			width: 24px;
+			height: 6px;
+			background-position: 0 -25px;
+		}
+		
+		.BMap_stdMpSlider {
+			width: 37px;
+			top: 18px;
+		}
+		
+		.BMap_stdMpSliderBgTop {
+			left: 18px;
+			width: 10px;
+			overflow: hidden;
+			background: url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat -23px -226px;
+		}
+		
+		.BMap_stdMpSliderBgBot {
+			left: 19px;
+			height: 8px;
+			width: 10px;
+			top: 124px;
+			overflow: hidden;
+			background: url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat -33px bottom;
+		}
+		
+		.BMap_ie6 .BMap_stdMpSliderBgTop,
+		.BMap_ie6 .BMap_stdMpSliderBgBot {
+			background: none;
+		}
+		
+		.BMap_ie6 .BMap_stdMpSliderBgTop div {
+			left: -23px;
+			top: -226px;
+		}
+		
+		.BMap_ie6 .BMap_stdMpSliderBgBot div {
+			left: -33px;
+			bottom: 0;
+		}
+		
+		.BMap_stdMpSliderMask {
+			height: 100%;
+			width: 24px;
+			left: 10px;
+			cursor: pointer;
+		}
+		
+		.BMap_stdMpSliderBar {
+			height: 11px;
+			width: 19px;
+			left: 13px;
+			top: 80px;
+			overflow: hidden;
+			background: url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat 0 -309px;
+		}
+		
+		.BMap_stdMpSliderBar.h {
+			background: url(http://api.map.baidu.com/images/mapctrls2d0.png) no-repeat 0 -320px;
+		}
+		
+		.BMap_ie6 .BMap_stdMpSliderBar,
+		.BMap_ie6 .BMap_stdMpSliderBar.h {
+			background: none;
+		}
+		
+		.BMap_ie6 .BMap_stdMpSliderBar div {
+			top: -309px;
+		}
+		
+		.BMap_ie6 .BMap_stdMpSliderBar.h div {
+			top: -320px;
+		}
+		
+		.BMap_zlSt,
+		.BMap_zlCity,
+		.BMap_zlProv,
+		.BMap_zlCountry {
+			position: absolute;
+			left: 34px;
+			height: 21px;
+			width: 28px;
+			background-image: url(http://api.map.baidu.com/images/mapctrls2d0.png);
+			background-repeat: no-repeat;
+			font-size: 0;
+			cursor: pointer;
+		}
+		
+		.BMap_ie6 .BMap_zlSt,
+		.BMap_ie6 .BMap_zlCity,
+		.BMap_ie6 .BMap_zlProv,
+		.BMap_ie6 .BMap_zlCountry {
+			background: none;
+			overflow: hidden;
+		}
+		
+		.BMap_zlHolder {
+			display: none;
+			position: absolute;
+			top: 0;
+		}
+		
+		.BMap_zlHolder.hvr {
+			display: block;
+		}
+		
+		.BMap_zlSt {
+			background-position: 0 -380px;
+			top: 21px;
+		}
+		
+		.BMap_zlCity {
+			background-position: 0 -401px;
+			top: 57px;
+		}
+		
+		.BMap_zlProv {
+			background-position: 0 -422px;
+			top: 81px;
+		}
+		
+		.BMap_zlCountry {
+			background-position: 0 -443px;
+			top: 105px;
+		}
+		
+		.BMap_ie6 .BMap_zlSt div {
+			top: -380px;
+		}
+		
+		.BMap_ie6 .BMap_zlCity div {
+			top: -401px;
+		}
+		
+		.BMap_ie6 .BMap_zlProv div {
+			top: -422px;
+		}
+		
+		.BMap_ie6 .BMap_zlCountry div {
+			top: -443px;
+		}
+		
+		.BMap_stdMpType1 .BMap_stdMpSlider,
+		.BMap_stdMpType2 .BMap_stdMpSlider,
+		.BMap_stdMpType3 .BMap_stdMpSlider,
+		.BMap_stdMpType4 .BMap_stdMpSlider,
+		.BMap_stdMpType2 .BMap_stdMpZoom,
+		.BMap_stdMpType3 .BMap_stdMpPan,
+		.BMap_stdMpType4 .BMap_stdMpPan {
+			display: none;
+		}
+		
+		.BMap_stdMpType3 .BMap_stdMpZoom {
+			top: 0;
+		}
+		
+		.BMap_stdMpType4 .BMap_stdMpZoom {
+			top: 0;
+		}
+		
+		.BMap_cpyCtrl a {
+			font-size: 11px;
+			color: #7979CC;
+		}
+		
+		.BMap_scaleCtrl {
+			height: 23px;
+			overflow: hidden;
+		}
+		
+		.BMap_scaleCtrl div.BMap_scaleTxt {
+			font-size: 11px;
+			font-family: Arial, sans-serif;
+		}
+		
+		.BMap_scaleCtrl div {
+			position: absolute;
+			overflow: hidden;
+		}
+		
+		.BMap_scaleHBar img,
+		.BMap_scaleLBar img,
+		.BMap_scaleRBar img {
+			position: absolute;
+			width: 37px;
+			height: 442px;
+			left: 0;
+		}
+		
+		.BMap_scaleHBar {
+			width: 100%;
+			height: 5px;
+			font-size: 0;
+			bottom: 0;
+		}
+		
+		.BMap_scaleHBar img {
+			top: -437px;
+			width: 100%;
+		}
+		
+		.BMap_scaleLBar,
+		.BMap_scaleRBar {
+			width: 3px;
+			height: 9px;
+			bottom: 0;
+			font-size: 0;
+			z-index: 1;
+		}
+		
+		.BMap_scaleLBar img {
+			top: -427px;
+			left: 0;
+		}
+		
+		.BMap_scaleRBar img {
+			top: -427px;
+			left: -5px;
+		}
+		
+		.BMap_scaleLBar {
+			left: 0;
+		}
+		
+		.BMap_scaleRBar {
+			right: 0;
+		}
+		
+		.BMap_scaleTxt {
+			text-align: center;
+			width: 100%;
+			cursor: default;
+			line-height: 18px;
+		}
+		
+		.BMap_omCtrl {
+			background-color: #fff;
+			overflow: hidden;
+		}
+		
+		.BMap_omOutFrame {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		
+		.BMap_omInnFrame {
+			position: absolute;
+			border: 1px solid #999;
+			background-color: #ccc;
+			overflow: hidden;
+		}
+		
+		.BMap_omMapContainer {
+			position: absolute;
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+		
+		.BMap_omViewMv {
+			border-width: 1px;
+			border-style: solid;
+			border-left-color: #84b0df;
+			border-top-color: #adcff4;
+			border-right-color: #274b8b;
+			border-bottom-color: #274b8b;
+			position: absolute;
+			z-index: 600;
+		}
+		
+		.BMap_omViewInnFrame {
+			border: 1px solid #3e6bb8;
+		}
+		
+		.BMap_omViewMask {
+			width: 1000px;
+			height: 1000px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: #68c;
+			opacity: .2;
+			filter: progid:DXImageTransform.Microsoft.Alpha(opacity=20);
+		}
+		
+		.BMap_omBtn {
+			height: 13px;
+			width: 13px;
+			position: absolute;
+			cursor: pointer;
+			overflow: hidden;
+			background: url(http://api.map.baidu.com/images/mapctrls1d3.gif) no-repeat;
+			z-index: 1210;
+		}
+		
+		.anchorBR .BMap_omOutFrame {
+			border-top: 1px solid #999;
+			border-left: 1px solid #999;
+		}
+		
+		.quad4 .BMap_omBtn {
+			background-position: -26px -27px;
+		}
+		
+		.quad4 .BMap_omBtn.hover {
+			background-position: 0 -27px;
+		}
+		
+		.quad4 .BMap_omBtn.BMap_omBtnClosed {
+			background-position: -39px -27px;
+		}
+		
+		.quad4 .BMap_omBtn.BMap_omBtnClosed.hover {
+			background-position: -13px -27px;
+		}
+		
+		.anchorTR .BMap_omOutFrame {
+			border-bottom: 1px solid #999;
+			border-left: 1px solid #999;
+		}
+		
+		.quad1 .BMap_omBtn {
+			background-position: -39px -41px;
+		}
+		
+		.quad1 .BMap_omBtn.hover {
+			background-position: -13px -41px;
+		}
+		
+		.quad1 .BMap_omBtn.BMap_omBtnClosed {
+			background-position: -26px -41px;
+		}
+		
+		.quad1 .BMap_omBtn.BMap_omBtnClosed.hover {
+			background-position: 0 -41px;
+		}
+		
+		.anchorBL .BMap_omOutFrame {
+			border-top: 1px solid #999;
+			border-right: 1px solid #999;
+		}
+		
+		.quad3 .BMap_omBtn {
+			background-position: -27px -40px;
+		}
+		
+		.quad3 .BMap_omBtn.hover {
+			background-position: -1px -40px;
+		}
+		
+		.quad3 .BMap_omBtn.BMap_omBtnClosed {
+			background-position: -40px -40px;
+		}
+		
+		.quad3 .BMap_omBtn.BMap_omBtnClosed.hover {
+			background-position: -14px -40px;
+		}
+		
+		.anchorTL .BMap_omOutFrame {
+			border-bottom: 1px solid #999;
+			border-right: 1px solid #999;
+		}
+		
+		.quad2 .BMap_omBtn {
+			background-position: -40px -28px;
+		}
+		
+		.quad2 .BMap_omBtn.hover {
+			background-position: -14px -28px;
+		}
+		
+		.quad2 .BMap_omBtn.BMap_omBtnClosed {
+			background-position: -27px -28px;
+		}
+		
+		.quad2 .BMap_omBtn.BMap_omBtnClosed.hover {
+			background-position: -1px -28px;
+		}
+		
+		.anchorR .BMap_omOutFrame {
+			border-bottom: 1px solid #999;
+			border-left: 1px solid #999;
+			border-top: 1px solid #999;
+		}
+		
+		.anchorL .BMap_omOutFrame {
+			border-bottom: 1px solid #999;
+			border-right: 1px solid #999;
+			border-top: 1px solid #999;
+		}
+		
+		.anchorB .BMap_omOutFrame {
+			border-top: 1px solid #999;
+			border-left: 1px solid #999;
+			border-right: 1px solid #999;
+		}
+		
+		.anchorT .BMap_omOutFrame {
+			border-bottom: 1px solid #999;
+			border-right: 1px solid #999;
+			border-left: 1px solid #999;
+		}
+		
+		.anchorNon .BMap_omOutFrame,
+		.withOffset .BMap_omOutFrame {
+			border: 1px solid #999;
+		}
+		
+		.BMap_zoomMask0,
+		.BMap_zoomMask1 {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: transparent url(http://api.map.baidu.com/images/blank.gif);
+			z-index: 1000;
+		}
+		
+		.BMap_contextMenu {
+			position: absolute;
+			border-top: 1px solid #adbfe4;
+			border-left: 1px solid #adbfe4;
+			border-right: 1px solid #8ba4d8;
+			border-bottom: 1px solid #8ba4d8;
+			padding: 0;
+			margin: 0;
+			width: auto;
+			visibility: hidden;
+			background: #fff;
+			z-index: 10000000;
+		}
+		
+		.BMap_cmShadow {
+			position: absolute;
+			background: #000;
+			opacity: .3;
+			filter: alpha(opacity=30);
+			visibility: hidden;
+			z-index: 9000000;
+		}
+		
+		div.BMap_cmDivider {
+			border-bottom: 1px solid #adbfe4;
+			font-size: 0;
+			padding: 1px;
+			margin: 0 6px;
+		}
+		
+		div.BMap_cmFstItem {
+			margin-top: 2px;
+		}
+		
+		div.BMap_cmLstItem {
+			margin-bottom: 2px;
+		}
+		
+		.BMap_shadow img {
+			border: 0 none;
+			margin: 0;
+			padding: 0;
+			position: absolute;
+			height: 370px;
+			width: 1144px;
+		}
+		
+		.BMap_pop .BMap_top {
+			border-top: 1px solid #ababab;
+			background-color: #fff;
+		}
+		
+		.BMap_pop .BMap_center {
+			border-left: 1px solid #ababab;
+			border-right: 1px solid #ababab;
+			background-color: #fff;
+		}
+		
+		.BMap_pop .BMap_bottom {
+			border-bottom: 1px solid #ababab;
+			background-color: #fff;
+		}
+		
+		.BMap_shadow,
+		.BMap_shadow img,
+		.BMap_shadow div {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+		}
+		
+		.BMap_checkbox {
+			background: url(http://api.map.baidu.com/images/mapctrls1d3.gif);
+			vertical-align: middle;
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			margin-right: 4px;
+			background-position: -14px 90px;
+		}
+		
+		.BMap_checkbox.checked {
+			background-position: -2px 90px;
+		}
+		
+		.BMap_pop .BMap_top img,
+		.BMap_pop .BMap_center img,
+		.BMap_pop .BMap_bottom img {
+			display: none;
+		}
+		
+		@media print {
+			.BMap_noprint {
+				display: none;
+			}
+			.BMap_noscreen {
+				display: block;
+			}
+			.BMap_mask {
+				background: none;
+			}
+			.BMap_pop .BMap_top img,
+			.BMap_pop .BMap_center img,
+			.BMap_pop .BMap_bottom img {
+				display: block;
+			}
+		}
+		
+		.BMap_vectex {
+			cursor: pointer;
+			width: 11px;
+			height: 11px;
+			position: absolute;
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+		
+		.BMap_vectex_nodeT {
+			background-image: url(http://api.map.baidu.com/images/nodeT.gif);
+		}
+		
+		.BMap_vectex_node {
+			background-image: url(http://api.map.baidu.com/images/node.gif);
+		}*/
+	</style>
+
+	<body>
+		<!--  header start -->
+		<div id="hd" style="background:#FFF; height:60px; border-bottom:1px solid #E6E6E6; ">
+			<div class="clear"></div>
+			<div id="week_nav">
+				<div class="wk_navwp">
+					<div class="wk_lonav">
+						<div class="wk_logo">
+							<h2>
+                        <a href="" title="">
+                            <img src="images/logo.png" alt="" border="0">
+                        </a>
+                    </h2>
+						</div>
+						<div class="wk_inav">
+							<ul class="nav">
+								<li id="mn_portal">
+									<a href="index.html" hidefocus="true" title="Portal">企业首页<span>Home</span></a>
+								</li>
+								<li id="mn_P7" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':7})">
+									<a href="new.html" hidefocus="true">新闻资讯</a>
+								</li>
+								<li id="mn_P2" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+									<a href="pro.html" hidefocus="true">产品中心</a>
+								</li>
+								<li id="mn_P8" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':8})">
+									<a href="case.html" hidefocus="true">项目案例</a>
+								</li>
+								<li id="mn_P10" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':10})">
+									<a href="fuwu.html" hidefocus="true">服务中心</a>
+								</li>
+								<li id="mn_P1" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':1})">
+									<a href="about.html" hidefocus="true">关于我们</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sub_nav">
+			<ul class="p_pop h_pop" id="mn_P7_menu" style="display: none">
+				<li>
+					<a href="" hidefocus="true">公司新闻</a>
+				</li>
+				<li>
+					<a href="" hidefocus="true">行业新闻</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P2_menu" style="display: none">
+
+				<li>
+					<a href="" hidefocus="true">软件开发</a>
+				</li>
+				<li>
+					<a href="" hidefocus="true">新媒体运营</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P8_menu" style="display: none">
+
+				<li>
+					<a href="" hidefocus="true">软件开发</a>
+				</li>
+				<li>
+					<a href="" hidefocus="true">新媒体运营</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P10_menu" style="display: none">
+				<li>
+					<a href="" hidefocus="true">常见问题</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P1_menu" style="display: none">
+				<li>
+					<a href="" hidefocus="true">企业文化</a>
+				</li>
+				<li>
+					<a href="" hidefocus="true">发展历程</a>
+				</li>
+				<li>
+					<a href="" hidefocus="true">诚聘英才</a>
+				</li>
+				<li>
+					<a href="" hidefocus="true">联系我们</a>
+				</li>
+			</ul>
+		</div>
+		<script src="js/week_nav.js" type="text/javascript"></script>
+		<!--  header end -->
+		<!-- banner -->
+		<div class="wk_list_box wk_list_box3">
+		</div>
+		<!-- banner -->
+		<!--  main  -->
+		<div class="wk_blog_tab">
+			<ul>
+				<li>
+					<a href="about.html" title="企业文化">企业文化</a>
+				</li>
+				<li>
+					<a href="fzlc.html" title="发展历程">发展历程</a>
+				</li>
+				<li>
+					<a href="" title="诚聘英才">诚聘英才</a>
+				</li>
+				<li>
+					<a href="lxwm.html" title="联系我们" class="a">联系我们</a>
+				</li>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<div class="week_contact">
+			<div class="week_container">
+				<ul class="contact-ways">
+					<li>
+						<a href="tel:400-500-8899">
+							<i class="i-phone"></i>
+							<h4>给我们打电话</h4>
+							<p class="cway-txt">（8610）84997048</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=597459558&amp;site=qq&amp;menu=yes">
+							<i class="i-qq"></i>
+							<h4>QQ在线联系</h4>
+							<p class="cway-txt">36543188</p>
+						</a>
+					</li>
+					<li>
+						<a href="Mailto:597459558@qq.com">
+							<i class="i-mail"></i>
+							<h4>给我们发邮件</h4>
+							<p class="cway-txt">cx@bvicc.com.cn</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--<div class="week_weixin">
+			<div class="week_container">
+				<h3>关注微信</h3>
+				<p>扫一扫二维码，关注我们的微信公众号</p>
+				<p class="week_weixin-p"><img src="images/weixin.jpg"></p>
+			</div>
+		</div>-->
+		<div class="week_map">
+			<div id="allmap" style="overflow: hidden; position: relative; z-index: 0; color: rgb(0, 0, 0); text-align: left; background-color: rgb(243, 241, 236);">
+				<div style="overflow: visible; position: absolute; z-index: 0; left: 0px; top: 0px; cursor: url(&quot;http://api.map.baidu.com/images/openhand.cur&quot;) 8 8, default;">
+					<div class="BMap_mask" style="position: absolute; left: 0px; top: 0px; z-index: 9; overflow: hidden; -webkit-user-select: none; width: 1663px; height: 520px;"></div>
+					<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200;">
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 800;"></div>
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 700;">
+							<span class="BMap_Marker BMap_noprint" unselectable="on"=" " style="position: absolute; padding: 0px; margin: 0px; border: 0px; cursor: pointer; width: 19px; height: 25px; left: 822px; top: 235px; z-index: -5906068; background: url(&quot;http://api.map.baidu.com/images/blank.gif&quot;); " title=" "></span></div>
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 600; "></div>
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 500; "><label class="BMapLabel " unselectable="on " style="position: absolute; display: inline; cursor: inherit; border: none; padding: 4px 10px; white-space: nowrap; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 14px; line-height: 20px; font-family: 'Microsoft Yahei'; z-index: -5906068; color: rgb(255, 255, 255); text-align: center; opacity: 0.7; left: 754px; top: 275px; background: rgb(222, 38, 46); ">北京市朝阳区领地OFFICE C座307<br>电话：（8610）84997048</label><label class="BMapLabel " unselectable="on " style="position: absolute; display: none; cursor: inherit; border: 1px solid rgb(190, 190, 190); padding: 1px; white-space: nowrap; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 12px; line-height: normal; font-family: arial, sans-serif; z-index: -20000; color: rgb(190, 190, 190); background-color: rgb(190, 190, 190); ">shadow</label></div>
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 400; "><span class="BMap_Marker " unselectable="on " style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 0px; height: 0px; left: 822px; top: 235px; z-index: -5906068; "><div style="position: absolute; margin: 0px; padding: 0px; width: 19px; height: 25px; overflow: hidden; left: 0px; top: -19px; "><img src="http://api.map.baidu.com/images/marker_red_sprite.png " style="border:none;left:0px; top:0px; position:absolute; "></div></span></div>
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 300; "><span unselectable="on " style="position: absolute; padding: 0px; margin: 0px; border: 0px; width: 20px; height: 11px; left: 826px; top: 249px; "><div style="position: absolute; margin: 0px; padding: 0px; width: 20px; height: 11px; overflow: hidden; left: 14px; top: -14px; "><img src="http://api.map.baidu.com/images/marker_red_sprite.png " style="border:none;left:-19px; top:-13px; position:absolute; "></div></span></div>
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 201; "></div>
+						<div style="position: absolute; height: 0px; width: 0px; left: 0px; top: 0px; z-index: 200; "></div>
+					</div>
+					<div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 1; ">
+						<div style="position: absolute; overflow: visible; z-index: -100; left: 832px; top: 260px; "><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=23171&amp;y=6683&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -85px; top: -69px; max-width: none; opacity: 1; "><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=23172&amp;y=6683&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 171px; top: -69px; max-width: none; opacity: 1; "><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=23170&amp;y=6683&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -341px; top: -69px; max-width: none; opacity: 1; "><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=23171&amp;y=6682&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -85px; top: 187px; max-width: none; opacity: 1; "><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=23171&amp;y=6684&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -85px; top: -325px; max-width: none; opacity: 1; "><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=23173&amp;y=6683&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 427px; top: -69px; max-width: none; opacity: 1; "><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=23169&amp;y=6683&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -597px; top: -69px; max-width: none; opacity: 1; "><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=23170&amp;y=6682&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -341px; top: 187px; max-width: none; opacity: 1; "><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=23172&amp;y=6684&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 171px; top: -325px; max-width: none; opacity: 1; "><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=23172&amp;y=6682&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 171px; top: 187px; max-width: none; opacity: 1; "><img src="http://online4.map.bdimg.com/tile/?qt=tile&amp;x=23170&amp;y=6684&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -341px; top: -325px; max-width: none; opacity: 1; "><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=23174&amp;y=6683&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 683px; top: -69px; max-width: none; opacity: 1; "><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=23168&amp;y=6683&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -853px; top: -69px; max-width: none; opacity: 1; "><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=23169&amp;y=6682&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -597px; top: 187px; max-width: none; opacity: 1; "><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=23173&amp;y=6682&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 427px; top: 187px; max-width: none; opacity: 1; "><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=23169&amp;y=6684&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -597px; top: -325px; max-width: none; opacity: 1; "><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=23173&amp;y=6684&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 427px; top: -325px; max-width: none; opacity: 1; "><img src="http://online0.map.bdimg.com/tile/?qt=tile&amp;x=23168&amp;y=6682&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -853px; top: 187px; max-width: none; opacity: 1; "><img src="http://online1.map.bdimg.com/tile/?qt=tile&amp;x=23174&amp;y=6682&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 683px; top: 187px; max-width: none; opacity: 1; "><img src="http://online2.map.bdimg.com/tile/?qt=tile&amp;x=23168&amp;y=6684&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: -853px; top: -325px; max-width: none; opacity: 1; "><img src="http://online3.map.bdimg.com/tile/?qt=tile&amp;x=23174&amp;y=6684&amp;z=17&amp;styles=pl&amp;udt=20150518 " style="position: absolute; border: none; width: 256px; height: 256px; left: 683px; top: -325px; max-width: none; opacity: 1; "></div>
+					</div>
+					<div style="position: absolute; overflow: visible; top: 0px; left: 0px; z-index: 2; "></div>
+				</div>
+				<div class=" anchorBL " style="height: 32px; position: absolute; z-index: 10; bottom: 0px; right: auto; top: auto; left: 1px; ">
+					<a title="到百度地图查看此区域 " target="_blank " href="http://map.baidu.com/?sr=1 " style="outline: none; "><img style="border:none;width:77px;height:32px " src="http://api.map.baidu.com/images/copyright_logo.png "></a>
+				</div>
+				<div id="zoomer " style="position:absolute;z-index:0;top:0px;left:0px;overflow:hidden;visibility:hidden;cursor:url(http://api.map.baidu.com/images/openhand.cur) 8 8,default ">
+					<div class="BMap_zoomer " style="top:0;left:0; "></div>
+					<div class="BMap_zoomer " style="top:0;right:0; "></div>
+					<div class="BMap_zoomer " style="bottom:0;left:0; "></div>
+					<div class="BMap_zoomer " style="bottom:0;right:0; "></div>
+				</div>
+				<div unselectable="on " class=" BMap_cpyCtrl BMap_noprint anchorBL " style="cursor: default; white-space: nowrap; color: black; font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; font-size: 11px; line-height: 15px; font-family: arial, sans-serif; bottom: 2px; right: auto; top: auto; left: 81px; position: absolute; z-index: 10; background: none; "><span _cid="1 "><span style="font-size:11px ">© 2015 Baidu&nbsp;- Data © <a target="_blank " href="http://www.navinfo.com/ " style="display:inline; ">NavInfo</a> &amp; <a target="_blank " href="http://www.cennavi.com.cn/ " style="display:inline; ">CenNavi</a> &amp; <a target="_blank " href="http://www.365ditu.com/ " style="display:inline; ">道道通</a></span></span>
+				</div>
+			</div>
+			<div class="mark-info ">
+				<h4>北京市朝阳区领地OFFICE C座307</h4>
+				<p>Mobile：（8610）84997048</p>
+			</div>
+		</div>
+		<script src="/skin/js/bc2e5c5a9a374dcc9280e69337a44301.js" type="text/javascript"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/getscript?v=1.4&ak=&services=&t=20150522093217"></script>
+		<script>
+			var map = new BMap.Map("allmap");
+			var point = new BMap.Point(116.420928, 40.046608);
+			map.centerAndZoom(point, 17);
+			map.setCurrentCity("北京");
+			var marker = new BMap.Marker(point);
+			map.addOverlay(marker);
+			marker.setAnimation(BMAP_ANIMATION_BOUNCE);
+			var opts = {
+				position: point,
+				offset: new BMap.Size(-78, 15)
+			}
+			var label = new BMap.Label("北京市朝阳区领地OFFICE C座307<br/>电话：（8610）84997048", opts);
+			label.setStyle({
+				color: "#FFF",
+				fontSize: "14px",
+				lineHeight: "20px",
+				padding: "4px 10px",
+				border: "none",
+				textAlign: "center",
+				background: "#DE262E",
+				fontFamily: "Microsoft Yahei",
+				opacity: "0.7",
+			});
+			map.addOverlay(label);
+		</script>
+		<div class="clear"></div>
+		<div id="wp" class="wp">
+			<div class="wp">
+				<div id="diy1" class="area"></div>
+			</div>
+			<div id="listcontenttop" class="area"></div>
+			<div class="clear"></div>
+			<div id="diycontentbottom" class="area"></div>
+			<div class="wp mtn">
+				<div id="diy3" class="area"></div>
+			</div>
+		</div>
+		<script>
+			_attachEvent(window, 'load', getForbiddenFormula, document);
+
+			function getForbiddenFormula() {
+				var toGetForbiddenFormulaFIds = function() {
+					ajaxget('plugin.php?id=cloudsearch&formhash=4510d125');
+				};
+				var a = document.body.getElementsByTagName('a');
+				for(var i = 0; i < a.length; i++) {
+					if(a[i].getAttribute('sc')) {
+						a[i].setAttribute('mid', hash(a[i].href));
+						a[i].onmousedown = function() { toGetForbiddenFormulaFIds(); };
+					}
+				}
+				var btn = document.body.getElementsByTagName('button');
+				for(var i = 0; i < btn.length; i++) {
+					if(btn[i].getAttribute('sc')) {
+						btn[i].setAttribute('mid', hash(btn[i].id));
+						btn[i].onmousedown = function() { toGetForbiddenFormulaFIds(); };
+					}
+				}
+			}
+		</script>
+
+		<!--  main  -->
+		<!-- footer -->
+		<div id="wk_ft ">
+			<section class="section fp-auto-height ">
+				<div class="wk_footer_side ">
+					<div class="wk_footer "> Copyright © 2016
+						<a href=" " target="_blank ">bvicc.com.cn</a>
+						<!--<a title="源码商城 " target="_blank ">技术支持：源码商城</a>-->
+						</br>备案号：
+						<a href="#" target="_blank" title="京ICP备01054254号"> 京ICP备16034630号-2</a>
+						<br>
+						<!--友情链接： <a href=" " target="_blank ">源码商城</a>  <a href=" " target="_blank ">源码购</a>-->
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- footer -->
+		<!-- kefu  -->
+		<link href="css/service.css" rel="stylesheet" type="text/css">
+		<div class="main-im">
+			<div id="open_im" class="open-im">&nbsp;</div>
+			<div class="im_main" id="im_main">
+				<div id="close_im" class="close-im">
+					<a href="javascript:void(0);" title="点击关闭">&nbsp;</a>
+				</div>
+				<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=597459558&amp;site=qq&amp;menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+					<div class="qq-container"></div>
+					<div class="qq-hover-c"><img class="img-qq" src="images/qq.png"></div>
+					<span>QQ在线咨询</span> </a>
+				<div class="im-tel">
+					<dt>QQ业务咨询</dt>
+					<dt class="tel-num">36543188</dt>
+					<dt>技术支持咨询</dt>
+					<dt class="tel-num">84997048</dt>
+				</div>
+				<div class="im-footer" style="position:relative">
+					<div class="weixing-container">
+						<div class="weixing-show">
+							<div class="weixing-txt">微信扫一扫<br>
+								<br> 了解更多资讯
+							</div>
+							<img class="weixing-ma" src="images/weixin.png">
+							<div class="weixing-sanjiao"></div>
+							<div class="weixing-sanjiao-big"></div>
+						</div>
+					</div>
+					<div class="go-top">
+						<a href="javascript:;" title="返回顶部"></a>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-1.7.2(1).js" type="text/javascript"></script>
+		<script type="text/javascript">
+			PTM(document).ready(function() {
+				PTM('#close_im').bind('click', function() {
+					PTM('#main-im').css("height", "0");
+					PTM('#im_main').hide();
+					PTM('#open_im').show();
+				});
+				PTM('#open_im').bind('click', function(e) {
+					PTM('#main-im').css("height", "272");
+					PTM('#im_main').show();
+					PTM(this).hide();
+				});
+				PTM('.go-top').bind('click', function() {
+					PTM(window).scrollTop(0);
+				});
+				PTM(".weixing-container").bind('mouseenter', function() {
+					PTM('.weixing-show').show();
+				})
+				PTM(".weixing-container").bind('mouseleave', function() {
+					PTM('.weixing-show').hide();
+				});
+			});
+		</script>
+		<!-- kefu  -->
+	</body>
+
+</html>

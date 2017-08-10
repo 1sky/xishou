@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>西首莱安逸辉</title>
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="css/style_2_common.css" />
+		<link rel="stylesheet" type="text/css" href="css/style_2_portal_index.css" />
+		<script src="js/jquery-1.7.2.js" type="text/javascript"></script>
+		<script src="js/common.js" type="text/javascript"></script>
+		<script src="js/pace.js" type="text/javascript"></script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<div id="hd" style="background:#FFF; height:60px; border-bottom:1px solid #E6E6E6; ">
+			<div class="clear"></div>
+			<div id="week_nav">
+				<div class="wk_navwp">
+					<div class="wk_lonav">
+						<div class="wk_logo">
+							<h2>
+		                        <a href="#" title="#">
+		                            <img src="images/logo.jpg" alt="#" border="0"/>
+		                        </a>
+		                    </h2>
+						</div>
+						<div class="wk_inav">
+							<ul class="nav">
+								<li id="mn_portal">
+									<a href="index.html" title="Portal">楼盘首页<span>Home</span></a>
+								</li>
+								<li id="mn_P7" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':7})">
+		                            <a href="new.html" hidefocus="true">新闻资讯</a>
+		                        </li>
+		                        <li id="mn_P2" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':2})">
+		                            <a href="pro.html" hidefocus="true">户型简介</a>
+		                        </li>
+		                        <li id="mn_P8" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':8})">
+		                            <a href="case.html" hidefocus="true">项目案例</a>
+		                        </li>
+		                        <li id="mn_P10" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':10})">
+		                            <a href="fuwu.html" hidefocus="true">服务中心</a>
+		                        </li>
+		                        <li id="mn_P1" onmouseover="showMenu({'ctrlid':this.id,'ctrlclass':'hover','duration':10})">
+		                            <a href="about.html" hidefocus="true">关于楼盘</a>
+		                        </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sub_nav">
+			<ul class="p_pop h_pop" id="mn_P7_menu" style="display: none">
+
+				<li>
+					<a href="#">公司新闻</a>
+				</li>
+
+				<li>
+					<a href="#">行业新闻</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P2_menu" style="display: none">
+  
+				
+
+				<li>
+					<a href="#">经典户型</a>
+				</li>
+
+				<li>
+					<a href="#">其他户型</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P8_menu" style="display: none">
+				<li>
+					<a href="case.html">精装一室</a>
+				</li>
+				<li>
+					<a href="case.html">精装两室</a>
+				</li>
+
+				<li>
+					<a href="case.html">精装三室</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P10_menu" style="display: none">
+
+				<li>
+					<a href="#">常见问题</a>
+				</li>
+			</ul>
+			<ul class="p_pop h_pop" id="mn_P1_menu" style="display: none">
+
+				<li>
+					<a href="#">楼盘简介</a>
+				</li>
+
+				<li>
+					<a href="#">环境介绍</a>
+				</li>
+
+				<li>
+					<a href="#">周围设施</a>
+				</li>
+
+				<li>
+					<a href="#">小区物业</a>
+				</li>
+			</ul>
+		</div>
+		<div id="wp" class="wp">
+			<script src="js/jquery-1.7.2(1).js" type="text/javascript"></script>
+			<script src="js/jquery.fullpage.min.js" type="text/javascript"></script>
+			<script src="js/scoll.js" type="text/javascript"></script>
+			<script src="js/addons.js" type="text/javascript"></script>
+			<script src="js/case.js" type="text/javascript"></script>
+			<script src="js/tab.lib.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				PTM(document).ready(function() {
+					PTM(".wk_about").tab({
+						tabId: "#wk_about_menu",
+						tabTag: "a",
+						conId: "#wk_about_div",
+						conTag: "div.wk_aaa",
+						act: "mouseover",
+						effact: "scrollx",
+						dft: 0
+					});
+				});
+			</script>
+		</div>
+		<div class="clear"></div>
+		<div class="wk_index_main">
+			<div class="section page1">
+				<div class="wk_slide-wrap">
+					<ul>
+						<li id="wk_s1" class="wk_selected">
+							<div class="wk_banner"></div>
+							<div class="wk_wrap">
+								<div class="wk_banner13"><img src="images/banner13.png" alt="" /></div>
+								<div class="wk_banner12"><img src="images/banner12.png" alt="" /></div>
+								<div class="wk_banner14"><img src="images/banner14.png" alt="" /></div>
+							</div>
+						</li>
+						<li id="wk_s2">
+							<div class="wk_banner"></div>
+							<div class="wk_wrap">
+								<div class="wk_banner22"><img src="images/banner22.png" alt="" /></div>
+								<div class="wk_banner23"><img src="images/banner23.png" alt="" /></div>
+								<div class="wk_banner24">
+									<a href="#" target="_blank">了解更多</a>
+								</div>
+							</div>
+						</li>
+						<li id="wk_s3">
+							<div class="wk_banner"></div>
+							<div class="wk_wrap">
+								<div class="wk_banner32"><img src="images/banner32.png" alt="" /></div>
+								<div class="wk_banner33"><img src="images/banner33.png" alt="" /></div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="wk_arrow">
+					<a href="#">
+						<img src="images/ico3.png" />
+					</a>
+				</div>
+				<div class="wk_slide-nav-wrap">
+					<div id="wk_slide-nav">
+						<ul>
+							<li class="wk_nav-line"></li>
+							<li class="wk_nav-bullet-container active" data-index="0">
+								<a class="nav-link" href="javascript:void(0)">
+									<div class="nav-bullet"></div>
+									<div class="nav-text">高端定制开发</div>
+								</a>
+							</li>
+							<li class="wk_nav-line"></li>
+							<li class="wk_nav-bullet-container" data-index="1">
+								<a class="nav-link" href="javascript:void(0)">
+									<div class="nav-bullet"></div>
+									<div class="nav-text">互联网整合营销</div>
+								</a>
+							</li>
+							<li class="wk_nav-line"></li>
+							<li class="wk_nav-bullet-container" data-index="2">
+								<a class="nav-link" href="javascript:void(0)">
+									<div class="nav-bullet"></div>
+									<div class="nav-text">响应式网站</div>
+								</a>
+							</li>
+							<li class="wk_nav-line"> </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="section page2">
+				<div class="wk_fwxm">
+					<ul>
+						<li class="wk_li1">
+							<div class="wk_fwxm_bg"></div>
+							<div class="wk_fwxm_main">
+								<div class="wk_fwxm_ico"></div>
+								<h2>房屋买卖租赁</h2>
+								<p>HOUSE BUYING AND SELLING THE LEASE</p>
+								<div class="wk_fwxm_des">西首房地产经纪有限公司是一家专注于二手住宅、商铺及写字楼的买卖和租赁服务的房产公司。</div>
+								<div class="wk_ljzx">
+									<a href="#" target="_blank">立即咨询</a>
+								</div>
+							</div>
+						</li>
+
+						<li class="wk_li2">
+							<div class="wk_fwxm_bg"></div>
+							<div class="wk_fwxm_main">
+								<div class="wk_fwxm_ico"></div>
+								<h2>政策咨询</h2>
+								<p>POLICY ADVICE</p>
+								<div class="wk_fwxm_des">西首房地产经纪有限公司为客户提供精准的房产政策解读咨询及专业的房产投资顾问</div>
+								<div class="wk_ljzx">
+									<a href="#" target="_blank">立即咨询</a>
+								</div>
+							</div>
+						</li>
+						<li class="wk_li3">
+							<div class="wk_fwxm_bg"></div>
+							<div class="wk_fwxm_main">
+								<div class="wk_fwxm_ico"></div>
+								<h2>按揭抵押贷款</h2>
+								<p>MORTGAGE PLEDGE THE LOAN</p>
+								<div class="wk_fwxm_des">西首房地产经纪有限公司为客户提供最安全、最快速、最高效的房产按揭、抵押贷款等一站式服务</div>
+								<div class="wk_ljzx">
+									<a href="#" target="_blank">立即咨询</a>
+								</div>
+							</div>
+						</li>
+						<li class="wk_li4">
+							<div class="wk_fwxm_bg"></div>
+							<div class="wk_fwxm_main">
+								<div class="wk_fwxm_ico"></div>
+								<h2>产权过户</h2>
+								<p>THE TRANSFER OF PROPERTY RIGHTS</p>
+								<div class="wk_fwxm_des">西首房地产经纪有限公司权证部专业负责客户房屋产权过户等一系列程序，让客户省时省力省心</div>
+								<div class="wk_ljzx">
+									<a href="#" target="_blank">立即咨询</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="section page3">
+				<div class="case">
+					<h2><img src="images/case_title.png" alt=""/></h2>
+					<h2 class="wk_h2"><img src="images/case_title1.png" alt=""/></h2>
+					<div class="wk_btndiv">
+						<a class="abtn aleft" href="javascript:void(0);">
+
+						</a>
+						<a class="abtn aright" href="javascript:void(0);"></a>
+					</div>
+					<div class="wk_scrollcontainer">
+						<ul>
+							<li>
+								<div class="wk_case_list">
+									<a href="#" target="_blank" title="vivo Xplay5双曲面屏">
+										<div class="wk_case_img">
+											<img src="images/t1.png" width="275" height="190" /></div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian"> <span class="wk_span_1"></span><span class="wk_span_2"></span>
+											<span class="wk_span_3"></span> <span class="wk_span_4"></span> </div>
+									</a>
+								</div>
+								<div class="wk_case_list">
+									<a href="" target="_blank">
+										<div class="wk_case_img">
+											<img src="images/T3.png" width="275" height="190" /></div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian">
+											<span class="wk_span_1"></span>
+											<span class="wk_span_2"></span>
+											<span class="wk_span_3"></span>
+											<span class="wk_span_4"></span>
+										</div>
+									</a>
+								</div>
+								<div class="wk_case_list">
+									<a href="#" target="_blank" title="零担速配APP案例">
+										<div class="wk_case_img">
+											<img src="images/T4.png" width="275" height="190" /></div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian">
+											<span class="wk_span_1"></span>
+											<span class="wk_span_2"></span>
+											<span class="wk_span_3"></span>
+											<span class="wk_span_4"></span>
+										</div>
+									</a>
+								</div>
+								<div class="wk_case_list">
+									<a href="#" target="_blank">
+										<div class="wk_case_img">
+											<img src="images/T5.png" width="275" height="190" /></div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian">
+											<span class="wk_span_1"></span>
+											<span class="wk_span_2"></span>
+											<span class="wk_span_3"></span>
+											<span class="wk_span_4"></span>
+										</div>
+									</a>
+								</div>
+								<div class="wk_case_list">
+									<a href="#" target="_blank" title="Jackery app">
+										<div class="wk_case_img">
+											<img src="images/T6.png" width="275" height="190" alt="Jackery app" />
+										</div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian">
+											<span class="wk_span_1"></span>
+											<span class="wk_span_2"></span>
+											<span class="wk_span_3"></span>
+											<span class="wk_span_4"></span>
+										</div>
+									</a>
+								</div>
+								<div class="wk_case_list">
+									<a href="#" target="_blank">
+										<div class="wk_case_img">
+											<img src="images/T7.png" width="275" height="190" /></div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian">
+											<span class="wk_span_1"></span>
+											<span class="wk_span_2"></span>
+											<span class="wk_span_3"></span>
+											<span class="wk_span_4"></span>
+										</div>
+									</a>
+								</div>
+								<div class="wk_case_list">
+									<a href="#" target="_blank">
+										<div class="wk_case_img">
+											<img src="images/T8.png" width="275" height="190" />
+										</div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian">
+											<span class="wk_span_1"></span>
+											<span class="wk_span_2"></span>
+											<span class="wk_span_3"></span>
+											<span class="wk_span_4"></span>
+										</div>
+									</a>
+								</div>
+								<div class="wk_case_list">
+									<a href="#" target="_blank">
+										<div class="wk_case_img">
+											<img src="images/T9.png" width="275" height="190" />
+										</div>
+										<div class="wk_case_ico"></div>
+										<div class="wk_case_xian">
+											<span class="wk_span_1"></span>
+											<span class="wk_span_2"></span>
+											<span class="wk_span_3"></span>
+											<span class="wk_span_4"></span>
+										</div>
+									</a>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<script type="text/javascript">
+					PTM(function() {
+						PTM(".case").Xslider({
+							unitdisplayed: 1,
+							numtoMove: 1,
+							speed: 500,
+							scrollobjSize: Math.ceil(PTM(".uldiv").find("li").length * 1)
+						})
+					})
+				</script>
+			</div>
+
+			<div class="section page4">
+				<div class="wk_about">
+					<h2><img src="images/about_title.png" alt=""/></h2>
+					<h2 class="wk_h2"><img src="images/about_title1.png" alt=""/></h2>
+					<div class="wk_about_menu" id="wk_about_menu">
+						<a class="active">简介</a>
+						<!--<a>动态</a>
+						<a>历程</a>-->
+					</div>
+					<div class="wk_about_div" id="wk_about_div">
+						<div class="wk_about_main wk_aaa">
+							<div class="wk_about_left"><img src="images/about_img.png" alt="" /></div>
+							<div class="wk_about_right">
+								<div class="wk_about_top">
+									<a><img src="images/about_ico1.png" alt="" /></a>
+									<a><img src="images/about_ico2.png" alt="" /></a>
+									<a><img src="images/about_ico3.png" alt="" /></a>
+									<a style="margin-right:0;"><img src="images/about_ico4.png" alt="" /></a>
+									<div class="clear"></div>
+								</div>
+								<div class=wk_about_des>西首房地产经纪有限公司是经省工商行政管理局批准成立的一家新型房产中介公司，公司致力于改变整个行业的形象，力图将每一位员工培养成高效、高能的专业房产经纪人，进而提供优质服务，成为您的房产管家是我们工作的最高追求。
+									<div class=wk_about_sec>我们的业务范围包括：二手住宅、商铺及写字楼的买卖和租赁;房地产政策咨询;房产按揭、抵押贷款及产权过户等业务。 </div>
+								</div>
+							</div>
+						</div>
+						<!--<div class="wk_news_list wk_aaa" style="opacity: 0;display: none;">
+							<ul>
+								<li>
+									<dl>
+										<dt>2016-11-15</dt>
+									</dl>
+									<h4><a href="#" title="" target="_blank">【小编推荐】没格局的努力都是在浪费时间！</a></h4>
+									<div class="wk_news_des">我们都知道：有用的社交一定是势均力敌的，处于同等段位的人，才能平等地对话；小菜鸟跟大咖本来就不是一国的，很多时候你以为的热...</div>
+									<div class="wk_news_more">
+										<a href="#" title="阅读更多" target="_blank"></a>
+									</div>
+								</li>
+								<li>
+									<dl>
+										<dt>2016-11-15</dt>
+									</dl>
+									<h4><a href="#" title="从问题中做分析，产品才能准确到位" target="_blank">从问题中做分析，产品才能准确到位</a></h4>
+									<div class="wk_news_des">分析对象不同，思考的内容不同。 一、项目初期，对可行性的分析 可行性 ＝市场环境+用户需求+产品逻辑+自身能力 1. 市场环境 1.1 背景和...</div>
+									<div class="wk_news_more">
+										<a href="#" title="阅读更多" target="_blank"></a>
+									</div>
+								</li>
+								<li>
+									<dl>
+										<dt>2016-11-15</dt>
+									</dl>
+									<h4><a href="#" title="互联网时代下，做营销更多是要学会讲故事" target="_blank">互联网时代下，做营销更多是要学会讲故事</a></h4>
+									<div class="wk_news_des">互联网时代，没故事的企业很可怕，有故事不讲的企业很吃亏。讲故事首先是让别人发现你，进而了解、喜欢、信任你，最后才达到买卖的...</div>
+									<div class="wk_news_more">
+										<a href="#" title="阅读更多" target="_blank"></a>
+									</div>
+								</li>
+								<li>
+									<dl>
+										<dt>2016-11-15</dt>
+									</dl>
+									<h4><a href="#" title="放任是最大的不信任，人一旦“放任”，就会“" target="_blank">放任是最大的不信任，人一旦“放任”，就会“</a></h4>
+									<div class="wk_news_des">人才建设是组织发展的重要环节，有人说现代企业间的竞争就是人才的竞争，可见人才培养的重要性。但现实中很多主管领导认为人才培养...</div>
+									<div class="wk_news_more">
+										<a href="#" title="阅读更多" target="_blank"></a>
+									</div>
+								</li>
+
+							</ul>
+
+						</div>-->
+						<div class="wk_history wk_aaa" style="height: 600px;">
+							<!--<div class="wk_blk_18" style="">
+								<a class="LeftBotton" onmousedown="ISL_GoUp_1()" onmouseup="ISL_StopUp_1()" onmouseout="ISL_StopUp_1()" href="javascript:void(0);" target="_self">
+
+								</a>
+								<div class="wk_pcont" id="ISL_Cont_11">
+									<div class="ScrCont">
+										<div id="List1_1">
+											<div id="List1_1">
+												<div class="wk_fzlc_s">
+													<h4>2009年11月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img1.jpg"></dt>
+														<dd>2009年，三个热爱设计工作的年轻人成立了周末网页设计工作室...</dd>
+													</dl>
+												</div>
+												<div class="wk_fzlc_b">
+													<h4>2009年5月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img2.jpg"></dt>
+														<dd>经过近两年来不断的创新探索和稳定发展,逐渐积累了丰富的客户资源，至今已服务客户300余家 ...
+														</dd>
+													</dl>
+												</div>
+												<div class="wk_fzlc_s">
+													<h4>2010年7月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img3.jpg"></dt>
+														<dd>随着人员和客户资源的不断增加，逐步以公司的模式进行运营...</dd>
+													</dl>
+												</div>
+												<div class="wk_fzlc_b">
+													<h4>2012年12月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img4.jpg"></dt>
+														<dd>服务客户已超过600余家，公司产品研发力度持续增强，手机网站和PC客户端、移动互联网...</dd>
+													</dl>
+												</div>
+												<div class="wk_fzlc_s">
+													<h4>2013年10月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img5.jpg"></dt>
+														<dd>公司更名为源码商城技术有限公司，并与众多知名企业进行合作...</dd>
+													</dl>
+												</div>
+												<div class="wk_fzlc_b">
+													<h4>2014年5月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img6.jpg"></dt>
+														<dd>源码商城与上海某某软件公司合并，打造集网站、APP与软件开发为一体的综合型科技产业公司...</dd>
+													</dl>
+												</div>
+												<div class="wk_fzlc_s">
+													<h4>2015年2月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img7.jpg"></dt>
+														<dd>与铭艺影视传媒公司合作，共同为客户提供互联网影视传媒服务...</dd>
+													</dl>
+												</div>
+												<div class="wk_fzlc_b">
+													<h4>2015年10月</h4>
+													<div class="wk_his_ico"></div>
+													<dl>
+														<dt><img src="images/history_img8.jpg"></dt>
+														<dd>致力于互联网+服务，打造品牌设计建设与网络推广营销综合服务新模式，更好的为客户提供全方位的互联网服务...</dd>
+													</dl>
+												</div>
+											</div>
+
+										</div>
+										<div id="List2_1"></div>
+									</div>
+								</div>
+								<a class="RightBotton" onmousedown="ISL_GoDown_1()" onmouseup="ISL_StopDown_1()" onmouseout="ISL_StopDown_1()" href="javascript:void(0);" target="_self"></a>
+							</div>-->
+							<div class="c"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section page5">
+				<div class="wk_service">
+					<h2><img src="images/service_title.png" alt=""/></h2>
+					<h2 class="wk_h2"><img src="images/service_title1.png" alt=""/></h2>
+					<div class="wk_service_xian"></div>
+					<div class="wk_service_main">
+						<ul>
+							<li>
+								<img src="images/T2.png" alt="启德考培" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T3.png" alt="山东美术馆" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T3.png" alt="爱书人" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T5.png" alt="小鸭集团" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T6.png" alt="中银律师" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T7.png" alt="深泉商学院" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T8.png" alt="中孚信息" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T9.png" alt="涵百化工" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T3.png" alt="上海大众" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T8.png" alt="山东司法警官学校" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T3.png" alt="易构软件" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T8.png" alt="DEOK" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T3.png" alt="读乐尔" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T8.png" alt="华清旅行社" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+							<li>
+								<img src="images/T3.png" alt="悦澜山" />
+								<span class="wk_span_1"></span>
+								<span class="wk_span_2"></span>
+								<span class="wk_span_3"></span>
+								<span class="wk_span_4"></span>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="section page6">
+				<div class="wk_contact">
+					<div class="wk_contact_left"><img src="images/contact_img.png" alt="" /></div>
+					<div class="wk_contact_left1"><img src="images/contact_img1.png" alt="" /></div>
+					<div class="wk_contact_right">
+						<h2><img src="images/contact_title.png" alt=""/></h2>
+						<ul class="wk_cont_div">
+							<li class="wk_serve-ico-kf">
+								业务咨询：
+								<span class="wk_cont_a">
+		                             <img src="images/cont_a.png"/>
+		                         </span>
+								<a href="#" target="_blank">81094552 【点击咨询】</a>
+							</li>
+							<li class="wk_serve-ico-kf">
+								固定电话：
+								<span class="wk_cont_a">
+		                            <img src="images/call.png"/>
+		                        </span>
+								<a href="#">（029）1909139【点击拨打】</a>
+							</li>
+							<li><span class="wk_cont_c"></span>81094552@qq.com</li>
+							<li><span class="wk_cont_d"></span>西安市高新区唐延路1号旺座国际城E1602室</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="section fp-auto-height">
+				<!--<div class="wk_footer_side">
+					<div class="wk_footer"> Copyright &copy; 2016
+						<a href="#" target="_blank">bvicc.com.cn</a>
+						</br>备案号：
+						<a href="#" target="_blank" title="京ICP备01054254号"> 京ICP备16034630号-2</a>
+						<br/> 
+					</div>
+				</div>-->
+			</div>
+		</div>
+		<script src="js/banner.js" type="text/javascript"></script>
+		<div class="clear"></div>
+		<div class="wp">
+			<div id="diy1" class="area"></div>
+		</div>
+		<div class="clear"></div>
+		<div id="wp" class="wp"> </div>
+		<div id="wk_ft" style="display:none; ">
+			<div id="ft" class="wp cl" style="border:0;"> </div>
+		</div>
+		<ul id="scbar_type_menu" class="p_pop" style="display: none;">
+		</ul>
+		<script type="text/javascript">
+			initSearchmenu('scbar', '');
+		</script>
+		<link href="css/service.css" rel="stylesheet" type="text/css" />
+		<div class="main-im">
+			<div id="open_im" class="open-im">&nbsp;</div>
+			<div class="im_main" id="im_main">
+				<div id="close_im" class="close-im">
+					<a href="javascript:void(0);" title="点击关闭">&nbsp;</a>
+				</div>
+				<a href="http://wpa.qq.com/msgrd?v=3&amp;uin=597459558&amp;site=qq&amp;menu=yes" target="_blank" class="im-qq qq-a" title="在线QQ客服">
+					<div class="qq-container"></div>
+					<div class="qq-hover-c"><img class="img-qq" src="images/qq.png"></div>
+					<span>QQ在线咨询</span> </a>
+				<div class="im-tel">
+					<dt>QQ业务咨询</dt>
+					<dt class="tel-num">81094552</dt>
+					<dt>技术支持咨询</dt>
+					<dt class="tel-num">81094552</dt>
+				</div>
+				<div class="im-footer" style="position:relative">
+					<div class="weixing-container">
+						<div class="weixing-show">
+							<div class="weixing-txt">微信扫一扫<br> 
+								<br> 了解更多资讯
+							</div>
+							<img class="weixing-ma" src="images/weixin.png">
+							<div class="weixing-sanjiao"></div>
+							<div class="weixing-sanjiao-big"></div>
+						</div>
+					</div>
+					<div class="go-top">
+						<a href="javascript:;" title="返回顶部"></a>
+					</div>
+					<div style="clear:both"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			PTM(document).ready(function() {
+				PTM('#close_im').bind('click', function() {
+					PTM('#main-im').css("height", "0");
+					PTM('#im_main').hide();
+					PTM('#open_im').show();
+				});
+				PTM('#open_im').bind('click', function(e) {
+					PTM('#main-im').css("height", "272");
+					PTM('#im_main').show();
+					PTM(this).hide();
+				});
+				PTM('.go-top').bind('click', function() {
+					PTM(window).scrollTop(0);
+				});
+				PTM(".weixing-container").bind('mouseenter', function() {
+					PTM('.weixing-show').show();
+				})
+				PTM(".weixing-container").bind('mouseleave', function() {
+					PTM('.weixing-show').hide();
+				});
+			});
+		</script>
+		<!--<script src="js/home.js" type="text/javascript"></script>-->
+		<div id="scrolltop"> <span hidefocus="true"><a title="返回顶部" onclick="window.scrollTo('0','0')" class="scrolltopa"><b>返回顶部</b></a></span> </div>
+		<script type="text/javascript">
+			_attachEvent(window, 'scroll', function() { showTopLink(); });
+			checkBlind();
+		</script>
+		<div id="discuz_tips" style="display:none;"></div>
+		<script src="js/discuz_tips.js" type="text/javascript" charset="UTF-8"></script>
+	</body>
+
+</html>
